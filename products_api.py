@@ -1,5 +1,4 @@
 import requests
-from pprint import pprint
 
 def get_all_products():
     response = requests.get('https://fakestoreapi.com/products')
@@ -35,6 +34,3 @@ def delete_product(product_id):
     response = requests.delete(f'https://fakestoreapi.com/products/{product_id}')
     if response.status_code == 200:
         return 'Продукт был успешно удалёен.'
-
-products = get_all_products()
-pprint(products)
