@@ -4,14 +4,15 @@ from pprint import pprint
 def get_all_categories():
     response = requests.get('https://fakestoreapi.com/products/categories')
     if response.status_code == 200:
-        products = response.json()
-        return products
-
-def get_all_carts():
-    response = requests.get('https://fakestoreapi.com/carts')
+        categories = response.json()
+        return categories
+    
+def get_products_of_categorie(categorie_name):
+    response = requests.get(f'https://fakestoreapi.com/products/category/{categorie_name}')
     if response.status_code == 200:
-        products = response.json()
-        return products
+        categorie = response.json()
+        return categorie
 
-products = get_all_carts()
-pprint(products)
+input_list = input('Гуруҳро муайян кунед: ')
+categories = get_products_of_categorie(input_list)
+pprint(categories)
