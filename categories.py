@@ -7,6 +7,11 @@ def get_all_categories():
         products = response.json()
         return products
 
+def get_all_carts():
+    response = requests.get('https://fakestoreapi.com/carts')
+    if response.status_code == 200:
+        products = response.json()
+        return products
 
-products = get_all_categories()
+products = get_all_carts()
 pprint(products)
