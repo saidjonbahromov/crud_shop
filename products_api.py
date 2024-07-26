@@ -36,6 +36,8 @@ def delete_product(product_id):
     if response.status_code == 200:
         return 'Продукт был успешно удалёен.'
 
+
+
 input_list = int(input('Рақами id дохил кунед: '))
 data = {
     
