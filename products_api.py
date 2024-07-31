@@ -35,13 +35,3 @@ def delete_product(product_id):
     response = requests.delete(f'https://fakestoreapi.com/products/{product_id}')
     if response.status_code == 200:
         return 'Продукт был успешно удалёен.'
-
-
-
-input_list = int(input('Рақами id дохил кунед: '))
-data = {
-    
-}
-
-products = get_single_product(input_list)
-pprint(products)

@@ -12,7 +12,3 @@ def get_products_of_categorie(categorie_name):
     if response.status_code == 200:
         categorie = response.json()
         return categorie
-
-input_list = input('Гуруҳро муайян кунед: ')
-categories = get_products_of_categorie(input_list)
-pprint(categories)

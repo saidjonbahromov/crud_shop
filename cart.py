@@ -24,7 +24,3 @@ def get_sorded_carts(sort_type):
     if response.status_code == 200:
         carts = response.json()
         return carts
-
-
-carts = get_sorded_carts('desc')
-pprint(carts)
